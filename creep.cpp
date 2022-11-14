@@ -83,7 +83,6 @@ int main(int argc, char* argv[]){
     std::string name;
     std::cout << "Who will creep : ";
     std::cin >> name;
-    freopen("params", "r", stdin);
     try {
         if(ground_length <= name.length()){
             throw "Ground length is too small!";
