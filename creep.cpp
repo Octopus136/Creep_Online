@@ -45,7 +45,7 @@ void creep(int ground_length, std::string name, int delay_ms){
 }
 int main(int argc, char* argv[]){
     try {
-        if(argc != 2 && argc != 0) {
+        if(argc != 3 && argc != 1) {
             throw "Invalid number of arguments";
         }
     }
@@ -54,9 +54,9 @@ int main(int argc, char* argv[]){
         return 1;
     }
     int ground_length, delay_ms;
-    if(argc == 2) {
-        std::string ground_length_str = argv[0];
-        std::string delay_ms_str = argv[1];
+    if(argc == 3) {
+        std::string ground_length_str = argv[1];
+        std::string delay_ms_str = argv[2];
         try {
             for(int i = 0; i < ground_length_str.length(); i++){
                 if(!isdigit(ground_length_str[i])){
